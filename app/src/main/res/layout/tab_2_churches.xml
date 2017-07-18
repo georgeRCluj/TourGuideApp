@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/newRequestTab"
+    style="@style/TabBarStyleLayout">
+
+    <ImageView
+        android:id="@+id/icon"
+        style="@style/TabBarStyleImage"
+        android:src="@drawable/ic_action_church_48" />
+
+</LinearLayout>

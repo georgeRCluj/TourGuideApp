@@ -1,0 +1,18 @@
+<resources>
+
+    <!-- General Paddings & Margins & heights-->
+    <dimen name="tab_bar_padding_above">8dp</dimen>
+    <dimen name="tab_2_list_items_layout_padding_horizontal">25dp</dimen>
+    <dimen name="tab_2_list_items_layout_padding_vertical">15dp</dimen>
+    <dimen name="tab_2_list_items_min_height">100dp</dimen>
+
+    <!-- TAB 1 - ALL DIMENSIONS -->
+    <dimen name="tab_1_edit_text_size">16sp</dimen>
+    <dimen name="distance_between_picture_to_text">24sp</dimen>
+    <dimen name="image_size">88dp</dimen>
+
+    <!-- Tabs dimensions -->
+    <dimen name="tab_min_height">85dp</dimen>
+    <dimen name="tab_icon_size">40dp</dimen>
+
+</resources>

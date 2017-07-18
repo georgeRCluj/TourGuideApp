@@ -1,0 +1,57 @@
+<resources xmlns:app="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- The below line of code erases the shadow line from the app bar -->
+        <item name="android:windowContentOverlay">@null</item>
+
+    </style>
+
+    <!-- Tab Bar style CUSTOM TAB VIEW WITH VIEWPAGER -->
+    <!-- Style for a tab that displays a category name -->
+    <style name="CategoryTab" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@android:color/white</item>
+        <item name="tabBackground">@color/colorPrimary</item>
+        <item name="tabSelectedTextColor">@android:color/white</item>
+        <!-- The below attribute is used for the tab to fill the entire width of the screen -->
+        <item name="tabGravity">fill</item>
+        <!-- The below attribute indicates the height of the selector line. In this case is 0, so the selector line is canceled. -->
+        <item name="tabIndicatorHeight">0dp</item>
+    </style>
+
+    <style name="TabBarStyleImage">
+        <item name="android:layout_width">@dimen/tab_icon_size</item>
+        <item name="android:layout_height">@dimen/tab_icon_size</item>
+    </style>
+
+    <style name="TabBarStyleLayout">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">@dimen/tab_bar_padding_above</item>
+    </style>
+
+    <style name="Tab2StationStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">@dimen/tab_1_edit_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Tab2TimeStyle" parent="@style/Tab2StationStyle">
+        <item name="android:paddingTop">@dimen/tab_bar_padding_above</item>
+        <item name="android:paddingBottom">@dimen/tab_bar_padding_above</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Tab2StatusStyle" parent="@style/Tab2StationStyle">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+</resources>

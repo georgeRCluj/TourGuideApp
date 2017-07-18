@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/tab_2_list_items_min_height"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/tab_2_list_items_layout_padding_vertical"
+    android:paddingLeft="@dimen/tab_2_list_items_layout_padding_horizontal"
+    android:paddingRight="@dimen/tab_2_list_items_layout_padding_horizontal"
+    android:paddingTop="@dimen/tab_2_list_items_layout_padding_vertical">
+
+    <ImageView
+        android:id="@+id/imageResId"
+        android:layout_width="@dimen/image_size"
+        android:layout_height="@dimen/image_size"
+        android:visibility="gone"
+        android:layout_marginRight="@dimen/distance_between_picture_to_text"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/nameId"
+            style="@style/Tab2StationStyle"
+            android:text="The National Museum" />
+
+        <TextView
+            android:id="@+id/phoneId"
+            style="@style/Tab2TimeStyle"
+            android:text="museumPhoneId" />
+
+        <TextView
+            android:id="@+id/emailId"
+            style="@style/Tab2TimeStyle"
+            android:text="museumEmailId" />
+
+        <TextView
+            android:id="@+id/websiteId"
+            style="@style/Tab2TimeStyle"
+            android:text="museumWebsiteId" />
+    </LinearLayout>
+</LinearLayout>
