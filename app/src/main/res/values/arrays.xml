@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string-array name="church_names">
+        <item>Calvaria Fortress Church</item>
+        <item>Saints Peter and Paul Church</item>
+        <item>The Bob Church</item>
+        <item>The Calvin Church with Rooster</item>
+        <item>The Calvin Reformed Church of the Lower Town</item>
+        <item>The Church of the Piarists</item>
+    </string-array>
+
+    <string-array name="church_phones">
+        <item>+40 (0)264 - 511.205</item>
+        <item>+40 (0)264 – 878.987</item>
+        <item>+40 (0)264 – 420.120</item>
+        <item>+40 (0)0264 - 540.210</item>
+        <item>+40 (0)0264 - 144.110</item>
+        <item>+40 (0)0264 - 149.841</item>
+    </string-array>
+
+    <string-array name="church_streets">
+        <item>Manastur 60 Street</item>
+        <item>36, Boulevard December 21, 1989</item>
+        <item>Narciselor 34"</item>
+        <item>84, Motilor Street</item>
+        <item>41, December 21st 1918 Boulevard</item>
+        <item>Grigorescu 23 Street</item>
+    </string-array>
+
+    <string-array name="museum_names">
+        <item>Art Museum</item>
+        <item>National Ethnographic Museum</item>
+        <item>Botanical Museum</item>
+        <item>Emil Racovita Museum</item>
+    </string-array>
+
+    <string-array name="museum_phones">
+        <item>+40 (0)264 - 596.953</item>
+        <item>+40 (0)264 – 586.776</item>
+        <item>+40 (0)264 – 592.152</item>
+        <item>+40 (0)0264 - 430.601</item>
+    </string-array>
+
+    <string-array name="museum_emails">
+        <item>macn@cluj.astral.ro</item>
+        <item>contact@muzeul-etnografic.ro</item>
+        <item>gradina.botanica@ubbcluj.ro</item>
+        <item>info-tourism@primariaclujnapoca.ro</item>
+    </string-array>
+
+    <string-array name="museum_websites">
+        <item>http://www.macluj.ro</item>
+        <item>http://www.muzeul-etnografic.ro</item>
+        <item>http://www.ubbcluj.ro/ro/structura/sport/botanica.html</item>
+        <item>no website</item>
+    </string-array>
+
+    <string-array name="park_names">
+        <item>„Alexandru Borza” Botanical Garden</item>
+        <item>„Simion Barnutiu” Central Park</item>
+        <item>The Cetatuia Park</item>
+        <item>The Faget of Cluj</item>
+        <item>The Hoia Forest and Hill</item>
+    </string-array>
+
+    <string-array name="park_streets">
+        <item>42 Republicii Street</item>
+        <item>Motilor Center</item>
+        <item>Cetatuia Street</item>
+        <item>Calea Turzii Street</item>
+        <item>Calea Baciului Street</item>
+    </string-array>
+
+    <string-array name="statue_names">
+        <item>Lupa Capitolina</item>
+        <item>Matia Corvin</item>
+        <item>Horea, Closca and Crisan Statuary Group</item>
+        <item>The “Carolina” Obelisk</item>
+        <item>Glory to the Romanian Soldier</item>
+    </string-array>
+
+    <string-array name="statue_streets">
+        <item>Eroilor Boulevard, pedestrian area</item>
+        <item>Unirii Square</item>
+        <item>1st of December 1918 Boulevard</item>
+        <item>The Museum Square</item>
+        <item>Avram Iancu Square</item>
+    </string-array>
+</resources>

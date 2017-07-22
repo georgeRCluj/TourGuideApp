@@ -18,17 +18,13 @@ public class MuseumsFragment extends Fragment {
     private ListView listView;
     private MuseumsListAdapter museumsListAdapter;
     private ArrayList<Museum> museums = new ArrayList<>();
-    private final String[] MUSEUM_NAMES = {"Art Museum", "National Ethnographic Museum", "Botanical Museum", "Emil Racovita Museum"};
-    private final String[] MUSEUM_PHONES = {"+40 (0)264 - 596.953", "+40 (0)264 – 586.776", "+40 (0)264 – 592.152", "+40 (0)0264 - 430.601"};
-    private final String[] MUSEUM_EMAILS = {"macn@cluj.astral.ro", "contact@muzeul-etnografic.rom", "gradina.botanica@ubbcluj.ro", "info-tourism@primariaclujnapoca.ro"};
-    private final String[] MUSEUM_WEBSITES = {"http://www.macluj.ro", "http://www.muzeul-etnografic.ro", "http://www.ubbcluj.ro/ro/structura/sport/botanica.html", " "};
+    private String[] museum_names, museum_phones, museum_emails, museum_websites;
 
     public MuseumsFragment() {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         initializeUiComponents(inflater, container);
         initializeMuseumsList();
         setAdapterOnMuseumsList();
@@ -41,13 +37,17 @@ public class MuseumsFragment extends Fragment {
     }
 
     private void initializeMuseumsList() {
+        museum_names = getActivity().getResources().getStringArray(R.array.museum_names);
+        museum_phones = getActivity().getResources().getStringArray(R.array.museum_phones);
+        museum_emails = getActivity().getResources().getStringArray(R.array.museum_emails);
+        museum_websites = getActivity().getResources().getStringArray(R.array.museum_websites);
         museums.clear();
-        for (int i = 0; i < MUSEUM_NAMES.length; i++) {
+        for (int i = 0; i < museum_names.length; i++) {
             Museum currentMuseum = new Museum();
-            currentMuseum.setName(MUSEUM_NAMES[i]);
-            currentMuseum.setPhone(MUSEUM_PHONES[i]);
-            currentMuseum.setEmail(MUSEUM_EMAILS[i]);
-            currentMuseum.setWebsite(MUSEUM_WEBSITES[i]);
+            currentMuseum.setName(museum_names[i]);
+            currentMuseum.setPhone(museum_phones[i]);
+            currentMuseum.setEmail(museum_emails[i]);
+            currentMuseum.setWebsite(museum_websites[i]);
             museums.add(currentMuseum);
         }
     }

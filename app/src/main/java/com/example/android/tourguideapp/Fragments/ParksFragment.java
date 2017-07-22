@@ -18,8 +18,7 @@ public class ParksFragment extends Fragment {
     private ListView listView;
     private StatuesAndParksListAdapter parksListAdapter;
     private ArrayList<StatuePark> statues = new ArrayList<>();
-    private final String[] PARKS_NAMES = {"„Alexandru Borza” Botanical Garden", "„Simion Barnutiu” Central Park", "The Cetatuia Park", "The Faget of Cluj", "The Hoia Forest and Hill"};
-    private final String[] PARKS_STREETS = {"42 Republicii Street", "Motilor Center", "Cetatuia Street", "Calea Turzii Street", "Calea Baciului Street"};
+    private String[] parks_names, parks_streets;
     private final int[] PARKS_PICTURES = {R.drawable.park_botanical_garden,R.drawable.park_simion_barnutiu, R.drawable.park_cetatuia, R.drawable.park_faget, R.drawable.park_bhoia};
 
     public ParksFragment() {
@@ -28,8 +27,8 @@ public class ParksFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         initializeUiComponents(inflater, container);
-        initializeMuseumsList();
-        setAdapterOnMuseumsList();
+        initializeParksList();
+        setAdapterOnParksList();
         return fragment_view;
     }
 
@@ -38,18 +37,20 @@ public class ParksFragment extends Fragment {
         listView = (ListView) fragment_view.findViewById(R.id.baseList);
     }
 
-    private void initializeMuseumsList() {
+    private void initializeParksList() {
+        parks_names = getActivity().getResources().getStringArray(R.array.park_names);
+        parks_streets = getActivity().getResources().getStringArray(R.array.park_streets);
         statues.clear();
-        for (int i = 0; i < PARKS_NAMES.length; i++) {
+        for (int i = 0; i < parks_names.length; i++) {
             StatuePark currentStatue = new StatuePark();
-            currentStatue.setName(PARKS_NAMES[i]);
-            currentStatue.setStreet(PARKS_STREETS[i]);
+            currentStatue.setName(parks_names[i]);
+            currentStatue.setStreet(parks_streets[i]);
             currentStatue.setImageResId(PARKS_PICTURES[i]);
             statues.add(currentStatue);
         }
     }
 
-    private void setAdapterOnMuseumsList() {
+    private void setAdapterOnParksList() {
         parksListAdapter = new StatuesAndParksListAdapter(getActivity(), statues);
         listView.setAdapter(parksListAdapter);
     }

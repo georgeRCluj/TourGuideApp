@@ -18,9 +18,7 @@ public class ChurchesFragment extends Fragment {
     private ListView listView;
     private ChurchesListAdapter churchesListAdapter;
     private ArrayList<Church> churches = new ArrayList<>();
-    private final String[] CHURCHES_NAMES = {"Calvaria Fortress Church", "Saints Peter and Paul Church", "The Bob Church", "The Calvin Church with Rooster", "The Calvin Reformed Church of the Lower Town", "The Church of the Piarists"};
-    private final String[] CHURCHES_PHONES = {"+40 (0)264 - 511.205", "+40 (0)264 – 878.987", "+40 (0)264 – 420.120", "+40 (0)0264 - 540.210", "+40 (0)0264 - 144.110", "+40 (0)0264 - 149.841"};
-    private final String[] CHURCHES_STREETS = {"Manastur 60 Street", "36, Boulevard December 21, 1989", "Narciselor 34", "84, Motilor Street", "41, December 21st 1918 Boulevard", "Grigorescu 23 Street"};
+    private String[] churches_names, churches_phones, churches_streets;
 
     public ChurchesFragment() {
     }
@@ -28,8 +26,8 @@ public class ChurchesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         initializeUiComponents(inflater, container);
-        initializeMuseumsList();
-        setAdapterOnMuseumsList();
+        initializeChurchesList();
+        setAdapterOnChurchesList();
         return fragment_view;
     }
 
@@ -38,18 +36,21 @@ public class ChurchesFragment extends Fragment {
         listView = (ListView) fragment_view.findViewById(R.id.baseList);
     }
 
-    private void initializeMuseumsList() {
+    private void initializeChurchesList() {
+        churches_names = getActivity().getResources().getStringArray(R.array.church_names);
+        churches_phones = getActivity().getResources().getStringArray(R.array.church_phones);
+        churches_streets = getActivity().getResources().getStringArray(R.array.church_streets);
         churches.clear();
-        for (int i = 0; i < CHURCHES_NAMES.length; i++) {
+        for (int i = 0; i < churches_names.length; i++) {
             Church currentChurch = new Church();
-            currentChurch.setName(CHURCHES_NAMES[i]);
-            currentChurch.setPhone(CHURCHES_PHONES[i]);
-            currentChurch.setStreet(CHURCHES_STREETS[i]);
+            currentChurch.setName(churches_names[i]);
+            currentChurch.setPhone(churches_phones[i]);
+            currentChurch.setStreet(churches_streets[i]);
             churches.add(currentChurch);
         }
     }
 
-    private void setAdapterOnMuseumsList() {
+    private void setAdapterOnChurchesList() {
         churchesListAdapter = new ChurchesListAdapter(getActivity(), churches);
         listView.setAdapter(churchesListAdapter);
     }
